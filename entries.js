@@ -1,0 +1,15 @@
+  const entries = [
+  { title: "Mecánica Nacional", imdbID: "tt0134817" },
+  { "title": "Vitória", "imdbID": "tt26675379" },
+  { "title": "Malcolm X", "imdbID": "tt0104797" },
+  { "title": "The Dark Side of the Heart", "imdbID": "tt0104662" },
+  { "title": "Six Degrees of Separation", "imdbID": "tt0108149" },
+  { "title": "Three Colors: Blue", "imdbID": "tt0108394" },
+  { "title": "Three Colors: White", "imdbID": "tt0111507" },
+  { "title": "Three Colors: Red", "imdbID": "tt0111495" },
+  { "title": "Chungking Express", "imdbID": "tt0109424" },
+  { "title": "El Alimento del miedo", "imdbID": "tt0896690" },
+  { "title": "Leaving Las Vegas", "imdbID": "tt0113627" },
+  { "title": "The Cremaster Cycle", "imdbID": "tt1992236" },
+  { "title": "To Live", "imdbID": "tt0110081" },
+];
