@@ -4,6 +4,15 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>cinefilos</title>
+  <link rel="manifest" href="assets/manifest.json">
+  <meta name="theme-color" content="#111111">
+
+  <!-- iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Cinéfilos">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
   <style>
     body {
       margin: 0;
@@ -22,7 +31,6 @@
       display: block;
     }
 
-    /* Center both coverflow + buttons in a 900px-wide viewport */
     .centered-container {
       max-width: 900px;
       width: 100%;
@@ -293,7 +301,7 @@
         }
       });
 
-      // Touch drag support
+      // Touch drag
       let startX = 0, isDragging = false;
       flow.addEventListener("touchstart", e => {
         if (e.touches.length === 1) {
@@ -326,7 +334,15 @@
     }
 
     init();
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker registered:', reg))
+          .catch(err => console.error('SW registration failed:', err));
+      });
+    }
   </script>
 </body>
 </html>
-10:03
